@@ -1,0 +1,19 @@
+{
+  "name": "inline-rest",
+  "version": "1.0.0",
+  "description": "A REST-client using restler that gives you the result as a return statement (synced) using the deasync package while actually performing the request asynchronousely.",
+  "main": "index.js",
+  "scripts": {
+    "test": "moch test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sittingbool/inline-rest"
+  },
+  "keywords": [
+    "REST",
+    "sync"
+  ],
+  "author": "Richard Habermann <sittingbool@gmx.de> (https://github.com/sittingbool/)",
+  "license": "MIT"
+}
