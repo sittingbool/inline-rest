@@ -1,7 +1,7 @@
 {
   "name": "inline-rest",
-  "version": "1.0.0",
-  "description": "A REST-client using restler that gives you the result as a return statement (synced) using the deasync package while actually performing the request asynchronousely.",
+  "version": "1.0.1",
+  "description": "A REST-client wrapping restler that gives you the result as a return statement (synced) using the deasync package while actually performing the request asynchronously.",
   "main": "index.js",
   "scripts": {
     "test": "moch test/test.js"
