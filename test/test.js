@@ -7,7 +7,8 @@ var should = require('should');
 var SyncRestler = require('../index.js');
 
 var instance;
-var serverPath = 'http://127.0.0.1:3825/test/';
+var serverDomain = 'http://127.0.0.1:3825';
+var serverPath = serverDomain + '/test/';
 
 describe('SyncRestler', function() {
 
@@ -59,6 +60,20 @@ describe('SyncRestler', function() {
     it('should make a delete request', function( done) {
         var result = instance.get(serverPath);
         checkResult(result);
+        done();
+    });
+
+
+    it('should fire timeout when configured to', function( done) {
+        var restler = new SyncRestler();
+        restler.firesTimeOut = true;
+        restler.timeOutInterval = 10 * 1000;
+        var result = restler.get(serverDomain + '/timeouttest/');
+        (result === null).should.be.true;
+        restler.hasError.should.be.true;
+        restler.error.message.indexOf('timeout').should.be.greaterThan(-1);
+        restler.timedOut.should.be.true;
+
         done();
     });
 

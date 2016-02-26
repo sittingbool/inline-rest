@@ -1,6 +1,6 @@
 {
   "name": "inline-rest",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A REST-client wrapping restler that gives you the result as a return statement (synced) using the deasync package while actually performing the request asynchronously.",
   "main": "index.js",
   "scripts": {

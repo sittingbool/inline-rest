@@ -59,3 +59,15 @@ Returns true if there was an error performing the request.
 ### error
 
 Returns an error object if request error or null if no error.
+
+### firesTimeOut
+
+If set to true the Request will fire a timeout when the server takes to much time without waiting for the timeout-response from that server. By default this ist set to false.
+
+### timeOutInterval
+
+If firesTimeOut set to true this will be the interval after which the timeout will be fired. The value is to be set in milliseconds. E.g 60000 would be 60 seconds.
+
+### timedOut
+
+If firesTimeOut set to true this indicate that the timeout event has been fired.

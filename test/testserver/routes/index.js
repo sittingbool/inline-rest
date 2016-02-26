@@ -42,5 +42,7 @@ router.get('/test', function(req, res, next) {
 router.post('/test', sendIncomingResult);
 router.put('/test', sendIncomingResult);
 router.delete('/test', sendJsonResult);
+router.get('/timeouttest', function(req, res, next) {
+});
 
 module.exports = router;
