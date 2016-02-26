@@ -77,4 +77,17 @@ describe('SyncRestler', function() {
         done();
     });
 
+    it('should not fire timeout when configured to but got result in time', function( done) {
+        var restler = new SyncRestler();
+        restler.firesTimeOut = true;
+        restler.timeOutInterval = 60 * 1000;
+        var result = restler.get(serverPath);
+        (result === null).should.be.false;
+        restler.hasError.should.be.false;
+        restler.timedOut.should.be.false;
+        checkResult(result);
+
+        done();
+    });
+
 });
